@@ -1,0 +1,31 @@
+# Product Studio — Python Requirements
+# Install with: pip install -r requirements.txt
+
+# ── UI ──────────────────────────────────────────────
+PyQt6>=6.6.0
+
+# ── Image generation (HuggingFace diffusers) ────────
+diffusers>=0.27.0
+transformers>=4.38.0
+accelerate>=0.27.0
+safetensors>=0.4.2
+
+# ── Image processing ─────────────────────────────────
+Pillow>=10.0.0
+
+# ── PyTorch (CPU fallback — for GPU see note below) ──
+# CPU only (slow but universally compatible):
+torch>=2.2.0
+torchvision>=0.17.0
+
+# ── Utilities ────────────────────────────────────────
+huggingface_hub>=0.21.0
+
+# ══════════════════════════════════════════════════════
+# GPU NOTE:
+# For NVIDIA GPU (much faster), install torch with CUDA instead:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# For AMD GPU (ROCm):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm5.7
+# ══════════════════════════════════════════════════════
